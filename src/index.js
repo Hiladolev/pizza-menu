@@ -49,14 +49,23 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <Header /> <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
 function Header() {
   return <h1>Fast React Pizza Co.</h1>;
 }
-function Menu() {}
+function Menu() {
+  return (
+    <div>
+      <h2>out menu</h2>
+      <Pizza />
+    </div>
+  );
+}
 function Footer() {
   return <footer>We're currently open</footer>;
 }
