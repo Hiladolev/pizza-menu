@@ -67,7 +67,9 @@ function Menu() {
   );
 }
 function Footer() {
-  return <footer>We're currently open</footer>;
+  return (
+    <footer>{new Date().toLocaleTimeString()} - We're currently open</footer>
+  );
 }
 function Pizza() {
   return (
