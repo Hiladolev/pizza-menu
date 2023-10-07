@@ -62,7 +62,7 @@ function Header() {
 function Menu() {
   return (
     <div>
-      <h2>out menu</h2>
+      <h2>our menu</h2>
       <Pizza />
     </div>
   );
