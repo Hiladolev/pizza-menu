@@ -84,7 +84,7 @@ function Footer() {
 }
 function Pizza() {
   return (
-    <div>
+    <div className="pizza">
       <img src="pizzas/spinaci.jpg" alt="pizza spinaci"></img>
       <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
