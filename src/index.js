@@ -65,10 +65,10 @@ function Header() {
 }
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>our menu</h2>
       <Pizza />
-    </div>
+    </main>
   );
 }
 function Footer() {
