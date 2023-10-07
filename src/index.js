@@ -77,7 +77,9 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   return (
-    <footer>{new Date().toLocaleTimeString()} - We're currently open</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()} - We're currently open
+    </footer>
   );
 }
 function Pizza() {
