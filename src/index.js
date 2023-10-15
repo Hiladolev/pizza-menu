@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import MainLayout from "./components/Layout/MainLayout";
+import App from "./components/App/App";
 import "./index.css";
 
 const pizzaData = [
@@ -48,14 +48,10 @@ const pizzaData = [
   },
 ];
 
-function App() {
-  return <MainLayout pizzas={pizzaData} />;
-}
-
 const domNode = document.getElementById("root");
 const root = createRoot(domNode);
 root.render(
   <StrictMode>
-    <App />
+    <App pizzaData={pizzaData} />
   </StrictMode>
 );
