@@ -1,11 +1,11 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Menu from "./Menu";
-export default function MainLayout(props) {
+export default function MainLayout({ pizzas }) {
   return (
     <div className="container">
       <Header />
-      <Menu pizzas={props.pizzas} />
+      <Menu pizzas={pizzas} />
       <Footer />
     </div>
   );
