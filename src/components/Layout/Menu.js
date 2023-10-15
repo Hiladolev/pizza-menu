@@ -1,4 +1,4 @@
-import Pizza from "../../Pizza/Pizza";
+import Pizza from "../Pizza/Pizza";
 export default function Menu(props) {
   return (
     <main className="menu">
