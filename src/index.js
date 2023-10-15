@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
+import MainLayout from "./components/Layout/MainLayout";
 import "./index.css";
 
 const pizzaData = [
@@ -48,65 +49,7 @@ const pizzaData = [
 ];
 
 function App() {
-  return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Footer />
-    </div>
-  );
-}
-function Header() {
-  return (
-    <header className="header">
-      <h1>Fast React Pizza Co.</h1>
-    </header>
-  );
-}
-function Menu() {
-  return (
-    <main className="menu">
-      <h2>our menu</h2>
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
-    </main>
-  );
-}
-function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
-  return (
-    <footer className="footer">
-      {isOpen ? (
-        <div className="order">
-          <p>We're open until {closeHour}:00. Come visit us or order online.</p>
-          <button className="btn">Order</button>
-        </div>
-      ) : (
-        <p>
-          We're happy to welcome you between {openHour}:00 - {closeHour}:00.
-        </p>
-      )}
-    </footer>
-  );
-}
-function Pizza(props) {
-  if (props.pizzaObj.soldOut) return null;
-  return (
-    <li className="pizza">
-      <img src={props.pizzaObj.photoName} alt={props.name} />
-      <div>
-        <h3>{props.pizzaObj.name}</h3>
-        <p>{props.pizzaObj.ingredients}</p>
-        <span>{props.pizzaObj.price}</span>
-      </div>
-    </li>
-  );
+  return <MainLayout pizzas={pizzaData} />;
 }
 
 const domNode = document.getElementById("root");
