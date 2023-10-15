@@ -5,7 +5,7 @@ export default function MainLayout({ pizzas }) {
   return (
     <div className="container">
       <Header />
-      <Menu pizzas={pizzas} />
+      <Menu pizzaData={pizzas} />
       <Footer />
     </div>
   );
